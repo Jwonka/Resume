@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Resume.master.cs" Inherits="Resume.Resume" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  <title>Resume</title>
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+  <div class="mainContainer">
+  <header>
+    <div class="headerContainer">
+      <img src="images/JoshWerlein_.png" alt="picture of Josh Werlein after completeing midterms"/>
+      <h1>Josh Werlein</h1>
+    </div>
+  </header>
+    
+  <form id="form1" runat="server">
+     <nav class="navMaxHeight">
+       <asp:Menu ID="navMenu" runat="server" DataSourceID="MainNavDS" Orientation="Horizontal"></asp:Menu>
+     </nav>
+     <main>
+       <div class="allContent">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
+        </div>
+     </main>
+  </form>
+    
+  <footer class="copyright">
+    <p>Copyright &copy; 2023 Josh Werlein</p>
+  </footer>
+  </div>
+  <asp:SiteMapDataSource ID="MainNavDS" runat="server" ShowStartingNode="False" />
+</body>
+</html>
